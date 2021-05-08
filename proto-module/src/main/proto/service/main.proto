@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option csharp_namespace = "HackathonGrpc";
+
+    package greet;
+
+    // The greeting service definition.
+service Article {
+  // Sends a greeting
+  rpc AddArticle (AddArticleRequest) returns (ArticleReply);
+  // Sends a greeting
+  rpc GetArticle (GetArticleRequest) returns (ArticleReply);
+}
+
+// The request message containing the user's name.
+message GetArticleRequest {
+  string Id = 1;
+}
+
+message AddArticleRequest {
+  string Title=1;
+  string Author=2;
+  string ArticleContent=3;
+  int64 PublishDate=4;
+  int32 StarCount=5;
+}
+
+message ArticleReply {
+  string Id = 1;
+  string Title = 2;
+  string Author = 3;
+  string ArticleContent = 4;
+  int64 PublishDate = 5;
+  int32 StarCount = 6;
+}

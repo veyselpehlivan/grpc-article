@@ -1,0 +1,8 @@
+grpc:
+  server:
+    port: 9090
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://HackKloia:HackKloia1234@hackkloaicluster.xsmjg.mongodb.net/HackKloiaDB?retryWrites=true&w=majority
